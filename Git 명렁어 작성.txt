@@ -1,0 +1,29 @@
+gitignore 원격저장소에 저장할때 이 파일은 무시하겠다
+>> 안에 써져있는건 무시함
+------------------
+<환경설정>
+1. git config --global core.autocrlf true : 줄바꿈 OS 설정
+2. git config --global user.name "이름" : 이름 설정
+3. git config --global user.email "깃헙 아이디" : 깃헙 아이디 설정
+5. git config --list : 환경설정 확인
+
+<경로 설정 및 .git 초기화 -> stage/index(tracked) -> commit -> remote로 원격 연결 -> push & pull>
+1.cd로 경로 설정
+**이동시, copy paste는 마우스 우클릭으로/ 경로는 "//"로 
+**절대경로는 cd를 친 후, 다시 cd + 경로로 이동해야한다.
+// 프로젝트 만들기 mkdir ~/폴더이름
+2. git init(초기화) : 폴더 자체를 원격이랑 연락하는 저장소로 쓰겠다
+3. git add *  <<untracked -> tracked (metadata는 제외)
+4. git status로 초록색 뜬거 확인
+5. git commit -m "주석"
+6. git remote add origin 내깃헙주소 : 로컬과 원격을 연결시키기(연락처주기)
+6-1. git remote remove origin <<< 주소 잘못 입력했을 때 
+6-2. 잘 들어갔는지 확인하는 법 : git remote -v
+7. git push --set-upstream origin master : 원격과 본격적으로 연결
+8. git pull --rebase origin master : 동기화
+8-1. (non-fast-forward) 오류 git push origin +master
+9. git push --set-upstream.origin.master 
+
+>> 깃허브에 자료 올라갔는지 확인하기
+
+ 
